@@ -2,7 +2,7 @@
 
 ## Install Ruby
 
-## Install [//compassstyle.org](Compass)
+## Install [Compass](//compassstyle.org)
 
 $ <code>gem install compass</code>
 
