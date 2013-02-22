@@ -4,8 +4,13 @@
 
 ## Install [//compassstyle.org](Compass)
 
-<code>$gem install compass</code>
+$ <code>gem install compass</code>
+
+## Install Foundation Gem
+
+$ <code>gem install zurb-foundation</code>
 
 ## Create Compass Project
+### With Zurb Foundation Framework
 
-<code>compass create --sass-dir "sass" --css-dir "stylesheets" --javascripts-dir "javascripts" --images-dir "images"</code>
+$ <code>compass create  -r zurb-foundation --using foundation</code>
