@@ -5,3 +5,5 @@
 # SASS Cache
 .sass-cache/
 
+# Should we ignore the compass config file? Using "compass create" would ensure to first-time Compass installers that their install works.
+config.rb
