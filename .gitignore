@@ -14,3 +14,5 @@ config.rb
 
 # Ignore the /stylesheets directory-- Compass will be compiling your SASS files into that directory and it will always be changing
 stylesheets/
+
+# Ignore Foundation License... it might get overwritten by another open source app.  Moved license to README of this project.
