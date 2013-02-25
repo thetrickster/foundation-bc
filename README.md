@@ -15,6 +15,12 @@ $ <code>gem install zurb-foundation</code>
 
 $ <code>compass create  -r zurb-foundation --using foundation</code>
 
+
+# Build Script
+
+## Update Build Script in future
+$ <code>git pull -s subtree h5bp-ant-bs master</code>
+
 ##### Zurb Foundation MIT Open Source License
 
 <pre><code>
