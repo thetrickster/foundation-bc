@@ -16,3 +16,7 @@ config.rb
 stylesheets/
 
 # Ignore Foundation License... it might get overwritten by another open source app.  Moved license to README of this project.
+MIT-LECENSE.txt
+
+# Ignore Dreamweaver Notes folders
+_notes/
