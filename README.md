@@ -15,7 +15,7 @@ $ <code>gem install zurb-foundation</code>
 
 $ <code>compass create  -r zurb-foundation --using foundation</code>
 
-##### Zurb Foundation Framework License
+##### Zurb Foundation MIT Open Source License
 
 <pre><code>
 Copyright (c) 2011 ZURB, http://www.zurb.com/
