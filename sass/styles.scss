@@ -1,0 +1,102 @@
+@import "foundation/common/ratios";
+
+// Let's overwrite the Foundation CSS we import from the CDN
+//// We get most of these variables from the _settings.scss file that is installed when installing 
+//// Foundation in Compass
+
+$rowWidth: 1280px;
+$maxWidth: $rowWidth;
+
+	// Colors
+	$orange: #d97036;
+	$black: #222222;
+	$gray: #777777;
+	$lightgray: #999999;
+	$whitesmoke: #f5f5f5;
+
+@import "foundation";
+
+body {
+	background: $whitesmoke;
+}
+
+#header {
+	background: $orange;
+	.row {
+		background: url('/images/Business Catalyst Banner_728x90.jpg') no-repeat scroll right  50% $orange;
+
+	}
+	h1 {
+		line-height: 86px;
+		height: 86px;
+		margin: 7px 0;
+		font-size: 28px;
+	}
+	a {
+		color: $black;
+		&:hover {
+			color: $gray;
+		}
+	}
+}
+
+.top-bar {
+	background: #FFFFFF;
+
+	.name {
+	}
+	h1 {
+		font-size: 18px;  
+	}
+
+	ul {
+		& > li {
+				a {
+					color: $gray;
+					&:hover {
+						color: $lightgray;
+					}
+				}
+				& a:not(.button) {
+				color: $gray;
+					&:hover {
+						color: $lightgray;
+					}
+
+				}
+
+				&:not(.name):hover, &:not(.name).active, &.active, &:hover {
+					background-color: none;
+					background: none;
+					border: 0 none;
+
+				}
+
+				&.toggle-topbar {
+					a {
+						border-color: $black transparent transparent transparent;
+						&:hover {
+							border-color: $gray transparent transparent transparent;
+						}
+					}
+				}
+			
+		}
+	}
+
+	.contain-to-grid & {
+		max-width: $maxWidth;
+	}
+	
+}
+.top-bar-js-breakpoint { 
+	width: $maxWidth !important; visibility: hidden; 
+}
+
+// Everything tablets and above
+@media screen and (min-width: 768px) {
+
+	#header {
+		margin-top: -30px;
+	}
+} 

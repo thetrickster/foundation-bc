@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	<title>{{ page.title }}</title>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/3.2.5/stylesheets/foundation.min.css" />
-	<link rel="stylesheet" href="/stylesheets/app.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/stylesheets/styles.css"/>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/3.2.5/javascripts/foundation.min.js"></script>
 </head>
 <body>
-<header class="container top-bar">
-	<div class="attached">
-		<div class="name three mobile-two columns ">
-			<h1><a href="/" title="{{ page.sitename }}">{{ site.sitename }}</a></h1>
-		</div>
-		<nav class="nine mobile-two columns">
+<div class="top-bar">
+	<div class="row attached">
+		<nav class="twelve mobile-four columns">
 			<ul class="right">
 				<li class="toggle-topbar"><a href="#"></a></li>
 				<li class="hide-from-small"><a href="/">Home</a></li>
-				<li><a href="{% page_url download %}">Download</a></li>
+				<li><a href="/download">Download</a></li>
 			</ul>
 		</nav>
 
 	</div>
 
+</div>
+<header id=header>
+	<div class="row">
+		<div class="twelve mobile-four columns">
+			<h1><a href="/" title="{{ page.sitename }}">{{ site.sitename }}</a></h1>
+		</div>
+	</div>
 </header>
+
+
 
 {{ content }}
 
