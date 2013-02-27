@@ -7,8 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/stylesheets/styles.css"/>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/3.2.5/javascripts/foundation.min.js"></script>
+	<script src="http://use.edgefonts.net/open-sans.js"></script>
+	<script src="http://use.edgefonts.net/ropa-sans.js"></script>
 </head>
-<body>
+<body class="{% if page.slug %}{{ page.slug }} {% endif %}">
 <div class="top-bar">
 	<div class="row attached">
 		<nav class="twelve mobile-four columns">
@@ -22,15 +24,8 @@
 	</div>
 
 </div>
-<header id=header>
-	<div class="row">
-		<div class="twelve mobile-four columns">
-			<h1><a href="/" title="{{ page.sitename }}">{{ site.sitename }}</a></h1>
-		</div>
-	</div>
-</header>
 
-
+{% include header.html %}
 
 {{ content }}
 

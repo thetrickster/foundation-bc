@@ -56,6 +56,5 @@ task :page do
     post.puts "title: \"#{title}\""
     post.puts 'description: ""'
     post.puts "---"
-    #post.puts "{% include JB/setup %}"
   end
 end # task :page

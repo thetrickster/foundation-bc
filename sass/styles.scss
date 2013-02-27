@@ -4,11 +4,14 @@
 //// We get most of these variables from the _settings.scss file that is installed when installing 
 //// Foundation in Compass
 
-$rowWidth: 1280px;
-$maxWidth: $rowWidth;
+$rowWidth: auto;
+$maxWidth: 1280px;
+//$topBarBreakPoint: 768px; // Change to 9999px for always mobile layout
+
 
 	// Colors
 	$orange: #d97036;
+	$lightorange: #FBB668;
 	$black: #222222;
 	$gray: #777777;
 	$lightgray: #999999;
@@ -16,32 +19,107 @@ $maxWidth: $rowWidth;
 
 @import "foundation";
 
-body {
-	background: $whitesmoke;
+// Add some base mixins for fonts
+@mixin bodyFont() {
+	font-family: open-sans, "HelveticaNeue-light", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@mixin headlineFont() {
+	font-family: ropa-sans, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#header {
-	background: $orange;
-	.row {
-		background: url('/images/Business Catalyst Banner_728x90.jpg') no-repeat scroll right  50% $orange;
+// Header gradient mixin
+@mixin headerGradient($color1, $color2) {
+	background: $color1; // Old browsers
+	background: -moz-linear-gradient(left, $color1 0%, $color1 50%, $color2 50%, $color2 100%); // FF3.6+
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color1), color-stop(50%,$color1), color-stop(50%,$color2), color-stop(100%,$color2)); // Chrome,Safari4+ 
+	background: -webkit-linear-gradient(left, $color1 0%,$color1 50%,$color2 50%,$color2 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(left, $color1 0%,$color1 50%,$color2 50%,$color2 100%); // Opera 11.10+
+	background: -ms-linear-gradient(left, $color1 0%,$color1 50%,$color2 50%,$color2 100%); // IE10+
+	background: linear-gradient(to right, $color1 0%,$color1 50%,$color2 50%,$color2 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 ); // IE6-9
+}
 
+body {
+	background: $whitesmoke;
+	min-width: 290px;
+	@include bodyFont;
+}
+
+h1, h2, h3 {
+	@include headlineFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	small {
+		color: $whitesmoke;
+	}
+}
+#header {
+	//@include headerGradient($orange, #f8a95a);
+	background: url('/images/header-bg.png') repeat-y scroll 50% top;
+	@include box-shadow(0px 0px 3px rgba($black, .5));
+
+
+	.row {
+		background: url('/images/bc-banner.jpg') no-repeat scroll right  50% $orange;
+	}
+	hgroup {
+		padding: 30px;
 	}
 	h1 {
-		line-height: 86px;
-		height: 86px;
+		// line-height: 86px;
+		// height: 86px;
 		margin: 7px 0;
-		font-size: 28px;
+		font-size: 32px;
+		font-weight: normal;
+
+		small {
+			//@include bodyFont;
+			@include text-shadow(0px 1px 1px $black);
+		}
 	}
 	a {
 		color: $black;
 		&:hover {
-			color: $gray;
+			color: #FFFFFF;
+		}
+	}
+
+	body.home & {
+		//@include headerGradient(#d56c35, $lightorange);
+		background: url('/images/header-bg-home.png') repeat-y scroll 50% top;
+		font-size: 36px;
+
+		&, .row {
+			height: 250px;
+		}
+		.row {
+			background-image: url('/images/bc-banner-large.jpg');
+			background-color: #d56c35;
+		}
+
+		h1 {
+			font-size: 56px;
+
+			span {
+				float: left;
+				margin-right: .5em;
+			}
+			small {
+				white-space: nowrap;
+				float: left;
+				line-height: 1;
+			}
 		}
 	}
 }
 
+.row {
+	max-width: $maxWidth;
+}
 .top-bar {
 	background: #FFFFFF;
+	@include box-shadow(0px 0px 3px rgba($black, .5));
 
 	.name {
 	}
@@ -58,7 +136,9 @@ body {
 					}
 				}
 				& a:not(.button) {
-				color: $gray;
+					color: $gray;
+					font-weight: normal;
+
 					&:hover {
 						color: $lightgray;
 					}
@@ -74,9 +154,9 @@ body {
 
 				&.toggle-topbar {
 					a {
-						border-color: $black transparent transparent transparent;
+						border-color: $gray transparent transparent transparent;
 						&:hover {
-							border-color: $gray transparent transparent transparent;
+							border-color: $lightgray transparent transparent transparent;
 						}
 					}
 				}
@@ -93,10 +173,37 @@ body {
 	width: $maxWidth !important; visibility: hidden; 
 }
 
+
+
+
 // Everything tablets and above
 @media screen and (min-width: 768px) {
-
-	#header {
-		margin-top: -30px;
+	.top-bar {
+		margin-bottom: 0;
 	}
 } 
+// Small Screens
+@media screen and (max-width: 767px) {
+
+}
+// Up to Landscape Mobile 
+@media screen and (max-width: 480px) {
+	#header {
+		hgroup {
+			padding: 15px;
+		}
+		h1 {
+			body.home & {
+				font-size: 42px;
+
+				small {
+					font-size: 22px;
+				}
+
+			}
+		}
+	}
+}
+@media screen and (max-width: 320px) {
+
+}

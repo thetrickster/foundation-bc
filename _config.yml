@@ -1,2 +1,4 @@
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:year/:title/
 sitename: Foundation for BC
+sitenamefull: "Foundation for Adobe&reg; Business Catalyst"
+sitenamefullhtml: "Foundation for Adobe<span>&reg;</span> Business Catalyst"

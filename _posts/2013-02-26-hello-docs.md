@@ -3,5 +3,7 @@ layout: post
 title: "hello, docs"
 category: "Docs"
 tags: []
+series: docs
 ---
-{% include JB/setup %}
+
+{% include series.html %}
