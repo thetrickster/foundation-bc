@@ -1,0 +1,12 @@
+---
+layout: page
+title: "Docs"
+description: ""
+slug: docs
+---
+
+<ul>
+	{% for post in site.categories.Docs reversed %}
+		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
