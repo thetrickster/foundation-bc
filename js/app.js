@@ -27,3 +27,13 @@
 // App script
 
 $(document).foundation();
+
+// Scroll to top
+
+// Scroll to top of window
+$(window).load(function () {
+	setTimeout(function () {
+		window.scrollTo(0, 1);
+	}, 0);
+});
+
