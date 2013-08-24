@@ -19,4 +19,8 @@ stylesheets/
 MIT-LECENSE.txt
 
 # Ignore Dreamweaver Notes folders
+<<<<<<< HEAD
 _notes/
+=======
+_notes/
+>>>>>>> 75b06b2c8acf457d2426704c6cd2f98e3c6b26cc
