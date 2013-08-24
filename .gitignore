@@ -10,7 +10,7 @@
 # Should we ignore the compass config file? 
 # Using "compass create" would ensure to first-time Compass installers that their install works.
 
-config.rb
+#config.rb
 
 # Ignore the /stylesheets directory-- Compass will be compiling your SASS files into that directory and it will always be changing
 stylesheets/
@@ -19,8 +19,4 @@ stylesheets/
 MIT-LECENSE.txt
 
 # Ignore Dreamweaver Notes folders
-<<<<<<< HEAD
 _notes/
-=======
-_notes/
->>>>>>> 75b06b2c8acf457d2426704c6cd2f98e3c6b26cc
