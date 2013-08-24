@@ -10,7 +10,7 @@
 # Should we ignore the compass config file? 
 # Using "compass create" would ensure to first-time Compass installers that their install works.
 
-#config.rb
+config.rb
 
 # Ignore the /stylesheets directory-- Compass will be compiling your SASS files into that directory and it will always be changing
 stylesheets/
